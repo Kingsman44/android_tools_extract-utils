@@ -440,11 +440,7 @@ function write_blueprint_packages() {
             printf '\towner: "%s",\n' "$VENDOR"
             printf '\tjars: ["%s/framework/%s"],\n' "$SRC" "$FILE"
         elif [ "$CLASS" = "ETC" ]; then
-            if [ "$EXTENSION" = "xml" ]; then
-                printf 'prebuilt_etc_xml {\n'
-            else
-                printf 'prebuilt_etc {\n'
-            fi
+            printf 'prebuilt_etc {\n'
             printf '\tname: "%s",\n' "$PKGNAME"
             printf '\towner: "%s",\n' "$VENDOR"
             printf '\tsrc: "%s/etc/%s",\n' "$SRC" "$FILE"
